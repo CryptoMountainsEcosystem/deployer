@@ -50,7 +50,7 @@ app_install_node()
     createdb "$DATABASE_NAME"
 
     rm -rf "$BRIDGECHAIN_PATH"
-    git clone https://github.com/CryptoMountainsEcosystem/cmt-node.git "$BRIDGECHAIN_PATH"
+    git clone https://github.com/CryptoMountainsEcosystem/cmt-node.git -b explorer "$BRIDGECHAIN_PATH"
     cd "$BRIDGECHAIN_PATH"
 
     npm install libpq
