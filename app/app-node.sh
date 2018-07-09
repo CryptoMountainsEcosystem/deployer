@@ -50,7 +50,7 @@ app_install_node()
     createdb "$DATABASE_NAME"
 
     rm -rf "$BRIDGECHAIN_PATH"
-    git clone https://github.com/ArkEcosystem/ark-node.git -b explorer "$BRIDGECHAIN_PATH"
+    git clone https://github.com/CryptoMountainsEcosystem/cmt-node.git "$BRIDGECHAIN_PATH"
     cd "$BRIDGECHAIN_PATH"
 
     npm install libpq
@@ -78,7 +78,7 @@ app_install_node()
     sed -i -e "s/var totalpremine = 2100000000000000;/var totalpremine = $TOTAL_PREMINE;/g" createGenesisBlock.js
     sed -i -e "s/4100/$NODE_PORT/g" createGenesisBlock.js
     sed -i -e "s/send: 10000000/send: $FEE_SEND/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
-    sed -i -e "s/vote: 100000000/vote: $FEE_VOTE/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
+    sed -i -e "s/vote: 10000000000000/vote: $FEE_VOTE/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
     sed -i -e "s/secondsignature: 500000000/secondsignature: $FEE_SECOND_PASSPHRASE/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
     sed -i -e "s/delegate: 2500000000/delegate: $FEE_DELEGATE/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
     sed -i -e "s/multisignature: 500000000/multisignature: $FEE_MULTISIG/g" "$BRIDGECHAIN_PATH/helpers/constants.js"
