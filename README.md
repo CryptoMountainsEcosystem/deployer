@@ -1,14 +1,13 @@
-![ARK-DESKTOP](https://user-images.githubusercontent.com/8069294/35097070-78c0dc40-fc46-11e7-9bb0-ad36f7182f39.png)
 
 ## Prerequisites
 
-- Because the ARK Node is recommended to be run on Ubuntu 16 (see the [node guide](https://blog.ark.io/how-to-setup-a-node-for-ark-and-a-basic-cheat-sheet-4f82910719da)), we recommend that the deployer is only run on Ubuntu 16 also.
+- Because the CMT Node is recommended to be run on Ubuntu 16 (see the [node guide](https://blog.CMT.io/how-to-setup-a-node-for-CMT-and-a-basic-cheat-sheet-4f82910719da)), we recommend that the deployer is only run on Ubuntu 16 also.
 - User running the deployer commands must be a sudoer
 
 ## Installation
 
 ```bash
-git clone https://github.com/ArkEcosystem/ark-deployer.git && cd ark-deployer
+git clone https://github.com/CMTEcosystem/CMT-deployer.git && cd CMT-deployer
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 source ~/.profile
 nvm install 8.9.1
@@ -17,15 +16,15 @@ sudo apt-get update && sudo apt-get install -y jq
 
 ## Detailed Guide
 
-Follow this [full guide](https://blog.ark.io/ark-deployer-setup-guide-c10825ebb0e4) to get the best out of your Bridgechain.
+Follow this [full guide](https://blog.CMT.io/CMT-deployer-setup-guide-c10825ebb0e4) to get the best out of your Bridgechain.
 
 ## Quick setup with Vagrant
 Deploy a bridgechain and explorer within its own Vagrant setup. This requires vagrant version 2 and up.
 
 1. Install Vagrant on your local computer
-2. Clone the ark-deployer from our repository
+2. Clone the CMT-deployer from our repository
 ```bash
-$> git clone https://github.com/ArkEcosystem/ark-deployer.git && cd ark-deployer
+$> git clone https://github.com/CMTEcosystem/CMT-deployer.git && cd CMT-deployer
 ```
 3. Run the vagrant command
 ```bash
@@ -44,15 +43,15 @@ Explorer (port forwarded): `http://127.0.0.1:14200/`
 *Note: Change <MACHINE_IP> to your Machine's IP*
 
 ```bash
-./bridgechain.sh install-node --name MyTest --database ark_mytest --token MYTEST --symbol MT --node-ip <NODE_IP>
+./bridgechain.sh install-node --name MyTest --database CMT_mytest --token MYTEST --symbol MT --node-ip <NODE_IP>
 ./bridgechain.sh start-node --name MyTest
 ```
 
 #### Optional Parameters
 
-    --path - Path to install Bridgechain [/home/$USER/ark-bridgechain]
+    --path - Path to install Bridgechain [/home/$USER/CMT-bridgechain]
     --name - Name of Bridgechain [bridgechain]
-    --database - Database Name [ark_bridgechain]
+    --database - Database Name [CMT_bridgechain]
     --node-ip - IP for node [0.0.0.0]
     --node-port - Port for node [4100]
     --explorer-ip - IP for explorer [127.0.0.1]
@@ -92,7 +91,7 @@ Explorer (port forwarded): `http://127.0.0.1:14200/`
 
 #### Optional Parameters
 
-    --path - Path to install Explorer [/home/$USER/ark-explorer]
+    --path - Path to install Explorer [/home/$USER/CMT-explorer]
     --name - Name of Bridgechain [bridgechain]
     --node-ip - IP for node [0.0.0.0]
     --node-port - Port for node [4100]
@@ -131,4 +130,4 @@ To use a config file during an install, simply use the `--config` argument. For 
 
 ## License
 
-ARK Deployer is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details.
+CMT Deployer is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details.
