@@ -1,4 +1,3 @@
-
 ## Prerequisites
 
 - Because the CMT Node is recommended to be run on Ubuntu 16 (see the [node guide](https://blog.CMT.io/how-to-setup-a-node-for-CMT-and-a-basic-cheat-sheet-4f82910719da)), we recommend that the deployer is only run on Ubuntu 16 also.
@@ -124,9 +123,7 @@ To use a config file during an install, simply use the `--config` argument. For 
 
 ## Credits
 
-- [Alex Barnsley](https://github.com/alexbarnsley)
-- [Brian Faust](https://github.com/faustbrian)
-- [All Contributors](../../contributors)
+- Lorenzo Caruso <lorenzo.caruso@outlook.com>
 
 ## License
 
